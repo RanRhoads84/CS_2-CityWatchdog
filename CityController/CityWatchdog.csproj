@@ -2,15 +2,12 @@
 
 	<PropertyGroup>
 		<OutputType>Library</OutputType>
-		<TargetFramework>net472</TargetFramework>
 		<Configurations>Debug;Release</Configurations>
-		<LangVersion>10</LangVersion>
-		<Product>City Controller</Product>
-		<Authors>Mbyron26</Authors>
-		<Version>0.2.1</Version>
-		<AssemblyVersion>0.2.1</AssemblyVersion>
-		<FileVersion>0.2.1</FileVersion>
-		<Copyright>Copyright © 2024 Mbyron26</Copyright>
+		<Product>City Watchdog</Product>
+		<Version>0.5.0</Version>
+		<AssemblyVersion>0.5.0.0</AssemblyVersion>
+		<FileVersion>0.5.0.0</FileVersion>
+		<Copyright>Copyright © 2026 River-Mochi</Copyright>
 
 		<!--The file where mod information which is required for publishing mod on PDX mods are stored-->
 		<PublishConfigurationPath>Properties\PublishConfiguration.xml</PublishConfigurationPath>
