@@ -1,0 +1,238 @@
+.panel {
+    position: absolute;
+    top: 60rem;
+    left: var(--screenPadding);
+    overflow: visible;
+    width: 380rem;
+    max-height: 890rem;
+    // Let custom wrapper colors show through instead of stacking extra vanilla fills.
+    // This follows the same idea used by ZoneTools: make the Panel shell transparent,
+    // then style the real vanilla header/content wrappers below.
+    --menuPanel1: transparent;
+    --menuPanel2: transparent;
+    --panelColorDark: transparent;
+    --panelColorNormal: transparent;
+    --sectionHeaderColor: transparent;
+    background-color: transparent;
+    // Actual vanilla Panel header wrapper.
+    // Higher alpha = darker/less see-through. Lower alpha = lighter/more see-through.
+    > div[class*="header_"] {
+        min-height: 28rem !important;
+        background-color: rgba(36, 54, 66, 0.72) !important;
+        background-image: none !important;
+        transition: background-color 120ms ease-out;
+    }
+        // Header hover: lighter gray and a little more transparent.
+        > div[class*="header_"]:hover {
+            background-color: rgba(76, 98, 112, 0.46) !important;
+        }
+    // Actual vanilla Panel content wrapper.
+    // This is the main large panel body behind toolbar + notification rows.
+    > div[class*="content_"] {
+        background-image: linear-gradient( to bottom, rgba(55, 82, 96, 0.72), rgba(31, 45, 60, 0.66) ) !important;
+        background-color: transparent !important;
+    }
+    // Keep only the original padding/close-button positioning fixes.
+    // Do not set background colors here; that can accidentally target the panel body.
+    > :nth-child(2) {
+        > :nth-child(1) {
+            > :nth-child(1) {
+                padding-right: 0 !important;
+            }
+
+            > :nth-child(2) {
+                right: 2rem;
+            }
+        }
+    }
+}
+
+.header {
+    width: 100%;
+    min-width: 0;
+    height: 26rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 4rem;
+    border-radius: 0;
+    background-color: transparent;  // hide the inner title bar on the header
+}
+
+.headerTitleArea {
+    display: flex;
+    flex: 1 1 auto;
+    min-width: 0;
+    height: 100%;
+    flex-direction: row;
+    align-items: center;
+}
+
+.headerModIcon {
+    width: 28rem;
+    height: 28rem;
+    margin-right: 10rem;
+    object-fit: contain;
+}
+
+.headerModName {
+    display: flex;
+    flex: 1 1 auto;
+    min-width: 0;
+    flex-direction: row;
+    justify-content: center;
+    color: #54d7ff;
+    font-size: var(--fontSizeS);
+    font-weight: 500;
+    letter-spacing: 2rem;
+}
+
+.headerCloseButton {
+    flex: 0 0 24rem;
+    width: 24rem;
+    height: 24rem;
+    margin-left: 8rem;
+}
+
+.introText {
+    padding: 10rem;
+    font-size: var(--fontSizeS);
+    color: rgba(254, 254, 254, 0.9);
+}
+
+// Info icon on left, buttons on right. Gap between them is 8rem.
+.toolbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8rem;
+    padding: 10rem;
+}
+
+// Keeps all 3 buttons grouped together
+.toolbarButtons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8rem;
+}
+
+//gives info icon the same framed button style
+.infoButton {
+    width: 32rem;
+    height: 32rem;
+    display: flex;
+    flex: 0 0 32rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4rem;
+    border: 1rem solid rgba(255, 255, 255, 0.35);
+    background-color: rgba(36, 54, 66, 0.58);
+
+    &:hover {
+        background-color: rgba(55, 78, 94, 0.74);
+    }
+}
+
+
+.infoIcon {
+    width: 28rem;
+    height: 28rem;
+    display: block;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+.toolbarButton {
+    height: 32rem;
+    min-width: 86rem;
+    padding: 0 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4rem;
+    border: 1rem solid rgba(255, 255, 255, 0.35);
+    background-color: rgba(36, 54, 66, 0.58);
+    color: rgba(255, 255, 255, 0.95);
+    font-size: var(--fontSizeS);
+    line-height: 1;
+    text-align: center;
+    text-transform: none;
+    white-space: nowrap;
+
+    &:hover {
+        background-color: rgba(55, 78, 94, 0.74);
+        color: #ffffff;
+    }
+}
+
+.toolbarIcon {
+    width: 22rem;
+    height: 22rem;
+    display: block;
+    object-fit: contain;
+    pointer-events: none;
+    vertical-align: middle;
+}
+
+.toggleAllIcon {
+    width: 28rem;
+    height: 28rem;
+}
+
+.expandCollapseIcon {
+    transform: rotate(90deg);
+    transform-origin: center;
+}
+
+
+.expandButton {
+    width: 34rem;
+    min-width: 34rem;
+    flex: 0 0 34rem;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.sortButton {
+    width: 64rem;
+    min-width: 64rem;
+    flex: 0 0 64rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+.toggleButton {
+    width: 34rem;
+    min-width: 34rem;
+    flex: 0 0 34rem;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.toggleAllOn {
+    border-color: rgba(95, 220, 120, 0.9);
+    background-color: rgba(40, 110, 62, 0.58);
+}
+
+.toggleAllPartial {
+    border-color: rgba(84, 215, 255, 0.9);
+    background-color: rgba(36, 88, 112, 0.58);
+}
+
+.toggleAllOff {
+    border-color: rgba(245, 96, 96, 0.9);
+    background-color: rgba(112, 42, 42, 0.58);
+}
+
+
+.modIcon {
+    width: 1.2em;
+    height: 1.2em;
+}
+
+.headerText {
+    margin-left: 5rem;
+    font-size: 14rem;
+}

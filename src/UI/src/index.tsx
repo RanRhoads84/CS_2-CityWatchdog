@@ -1,0 +1,16 @@
+import { ModRegistrar } from "cs2/modding";
+import mod from "../mod.json";
+import { NotificationPanel } from "./mods/NotificationPanel/NotificationPanel";
+import { EntryButton } from "./mods/EntryButton/EntryButton";
+import { VanillaComponentResolver } from "./mods/VanillaComponentResolver/VanillaComponentResolver";
+import "../images/NotificationIcon_TitleBar.svg";
+import "../images/CWDNotificationIcon_white02.svg";
+
+const register: ModRegistrar = (moduleRegistry) => {
+    VanillaComponentResolver.setRegistry(moduleRegistry);
+    moduleRegistry.append("GameTopLeft", EntryButton);
+    moduleRegistry.append("Game", NotificationPanel);
+    console.log(`${mod.id} - UI registration completed`);
+};
+
+export default register;
