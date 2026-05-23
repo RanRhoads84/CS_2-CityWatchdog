@@ -202,15 +202,16 @@ namespace CityWatchdog
                     "<Notification panel>\n" +
                     "1. Click the City Watchdog button (Top Left), or press Shift+N, to open the panel.\n" +
                     "2. ASC/DESC to sort.\n" +
-                    "3. Use Toggle All for quick setup, or expand a section to change individual notification icons.\n" +
-                    "4. City Watchdog hides or shows icons only; it does not fix the underlying city problem.\n\n" +
+                    "3. Toggle All for quick all Off/On, or expand a section to change specific ones.\n" +
+                    "4. Shows or hides icons only; does not fix the underlying city problem.\n\n" +
                     "<Money helpers>\n" +
-                    "1. Money View adds numeric /h or /mo values beside the bottom-toolbar money and population trend arrows.\n" +
-                    "2. Add and Subtract Money: use the <Money Hotkey Amount>.\n" +
-                    "3. Automatic Add Money watches the city balance while a city is loaded and adds money when below the threshold.\n" +
-                    "4. Convert Unlimited Money Save is only for cities that were started with Unlimited Money and is <not reversible> by City Watchdog.\n\n" +
+                    "1. Add or Subtract Money: use the <Money Hotkey Amount> default [ or ].\n" +
+                    "2. Automatic add money watches the budget while a city is loaded and adds money when below the threshold.\n" +
+                    "3. Money View adds numeric values to the money and population toolbar and tool tips on mouse hover.\n" +
+                    "4. Convert Unlimited Money Save is only for cities that were started with Unlimited Money and is <not reversible>.\n\n" +
                     "<Custom milestone>\n" +
-                    "Set Initial Money and select Milestones from the Options menu before loading or starting a city." },
+                    "Set Initial Money and select Milestones from the Options menu before loading or starting a city."
+                },
                 { m_Settings.GetOptionDescLocaleID(nameof(Setting.UsageText)), "" },
 
                 // --- Notification panel common text ---
