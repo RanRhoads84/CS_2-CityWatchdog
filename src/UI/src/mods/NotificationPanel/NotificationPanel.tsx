@@ -351,6 +351,7 @@ const sections: NotificationSection[] = [
 ];
 
 const allItems = sections.flatMap((section) => section.items);
+const allIconSources = Array.from(new Set(allItems.map((item) => item.icon)));
 
 const setAllNotifications = (enabled: boolean) => {
     OnToggleAllNotifications(enabled);
@@ -518,6 +519,8 @@ const NotificationPanelContent = () => {
                 </div>
             </div>
 
+            <IconPreloader />
+
             {orderedSections.map((section, index) => (
                 <NotificationSectionView
                     key={section.localeId}
@@ -529,6 +532,16 @@ const NotificationPanelContent = () => {
                 />
             ))}
         </Panel>
+    );
+};
+
+const IconPreloader = () => {
+    return (
+        <div className={styles.iconPreloader} aria-hidden="true">
+            {allIconSources.map((source) => (
+                <img key={source} src={source} alt="" />
+            ))}
+        </div>
     );
 };
 

@@ -38,8 +38,14 @@
         text-transform: none;
     }
 
+.infoPanelBody {
+    margin-top: 6rem;
+}
+
 .infoPanelSummary {
-    min-width: 26rem;
+    min-width: 34rem;
+    margin-left: auto;
+    margin-right: 5rem;
     padding: 2rem 7rem;
     border-radius: 9rem;
     background-color: rgba(255, 255, 255, 0.14);
@@ -51,6 +57,7 @@
 .infoPanelToggle {
     width: 22rem;
     height: 22rem;
+    flex: 0 0 22rem;
     display: flex;
     align-items: center;
     justify-content: center;

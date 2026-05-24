@@ -60,7 +60,11 @@ export const InfoPanel = ({
             )}
 
             {title && !collapsible && <div className={styles.infoPanelTitle}>{title}</div>}
-            {showBody && (renderChildren ? renderChildren() : children)}
+            {showBody && (
+                <div className={styles.infoPanelBody}>
+                    {renderChildren ? renderChildren() : children}
+                </div>
+            )}
         </div>
     );
 };

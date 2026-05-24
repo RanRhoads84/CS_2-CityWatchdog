@@ -230,7 +230,6 @@
     background-color: rgba(112, 42, 42, 0.58);
 }
 
-
 .modIcon {
     width: 1.2em;
     height: 1.2em;
@@ -239,4 +238,20 @@
 .headerText {
     margin-left: 5rem;
     font-size: 14rem;
+}
+
+.iconPreloader {
+    position: absolute;
+    left: -9999rem;
+    top: -9999rem;
+    width: 1rem;
+    height: 1rem;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+
+    img {
+        width: 1rem;
+        height: 1rem;
+    }
 }
