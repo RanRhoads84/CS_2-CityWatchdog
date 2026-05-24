@@ -561,6 +561,13 @@ const NotificationSectionView = ({
     const values = useSectionValues(section);
     const selectedCount = values.filter(Boolean).length;
 
+    const summaryState =
+        selectedCount === section.items.length
+            ? "on"
+            : selectedCount > 0
+                ? "partial"
+                : "off";
+
     return (
         <>
             {showDivider && <Divider></Divider>}
@@ -570,6 +577,7 @@ const NotificationSectionView = ({
                 expanded={expanded}
                 onExpandedChange={onExpandedChange}
                 summary={`${selectedCount}/${section.items.length}`}
+                summaryState={summaryState}
                 renderChildren={() => section.items.map((item, itemIndex) => (
                     <NotificationRow
                         key={item.localeId}

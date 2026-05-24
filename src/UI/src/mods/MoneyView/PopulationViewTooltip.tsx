@@ -20,6 +20,7 @@ export const PopulationViewTooltipContent = ({ baseContent }: { readonly baseCon
     // These come from vanilla PopulationInfoviewUISystem, so CWD does not need its own sim queries.
     const births = getNumericValue(useValue(infoview.birthRate$));
     const deaths = getNumericValue(useValue(infoview.deathRate$));
+    const homeless = getNumericValue(useValue(infoview.homeless$));
     const movedIn = getNumericValue(useValue(infoview.movedIn$));
     const movedAway = getNumericValue(useValue(infoview.movedAway$));
 
@@ -51,6 +52,11 @@ export const PopulationViewTooltipContent = ({ baseContent }: { readonly baseCon
                     label={localize("PopulationTooltipDeaths", "Deaths:")}
                     value={deaths}
                     direction={-1}
+                />
+                <PopulationTooltipCount
+                    localization={localization}
+                    label={localize("PopulationTooltipHomeless", "Homeless:")}
+                    value={homeless}
                 />
                 <PopulationTooltipFlow
                     localization={localization}
@@ -113,6 +119,29 @@ const PopulationTooltipFlow = ({
     );
 };
 
+const PopulationTooltipCount = ({
+    localization,
+    label,
+    value,
+}: {
+    readonly localization: Localization;
+    readonly label: string;
+    readonly value: number;
+}) => {
+    const displayValue = getDisplayWholeValue(value);
+
+    return (
+        <PopulationTooltipRate
+            localization={localization}
+            label={label}
+            value={displayValue}
+            unit={Unit.Integer}
+            toneOverride={displayValue > 0 ? "negative" : "neutral"}
+            showSign={false}
+        />
+    );
+};
+
 const PopulationTooltipCurrentTrend = ({
     localization,
     label,
@@ -141,15 +170,21 @@ const PopulationTooltipRate = ({
     value,
     unit,
     topRow = false,
+    toneOverride,
+    showSign = true,
 }: {
     readonly localization: Localization;
     readonly label: string;
     readonly value: number;
     readonly unit: Unit;
     readonly topRow?: boolean;
+    readonly toneOverride?: "positive" | "negative" | "neutral";
+    readonly showSign?: boolean;
 }) => {
-    const tone = getSignedAmountTone(value);
-    const text = formatPopulationRateValue(localization, value, unit);
+    const tone = toneOverride ?? getSignedAmountTone(value);
+    const text = showSign
+        ? formatPopulationRateValue(localization, value, unit)
+        : formatLocalizedIntegerValue(localization, value, unit);
 
     return (
         <div className={`${styles.populationTooltipGroup} ${topRow ? styles.populationTooltipTopTrend : ""}`}>
@@ -160,7 +195,7 @@ const PopulationTooltipRate = ({
 };
 
 const formatPopulationRateValue = (localization: Localization, value: number, unit: Unit): string => {
-    const magnitude = formatLocalizedIntegerRate(localization, Math.abs(value), unit);
+    const magnitude = formatLocalizedIntegerValue(localization, Math.abs(value), unit);
     const spacer = "\u200A";
 
     if (value > 0) {
@@ -174,16 +209,23 @@ const formatPopulationRateValue = (localization: Localization, value: number, un
     return magnitude;
 };
 
-const formatLocalizedIntegerRate = (localization: Localization, value: number, unit: Unit): string => {
+const formatLocalizedIntegerValue = (localization: Localization, value: number, unit: Unit): string => {
     try {
-        // Vanilla formatter keeps separators and /h or /mo aligned with selected game language.
+        // Vanilla formatter keeps separators and /h or /mo aligned with the selected game language.
         return LocalizedNumber.renderString(localization, {
             value,
             unit,
             signed: false,
         });
     } catch {
-        return `${Math.round(Math.abs(value)).toString()}${unit === Unit.IntegerPerMonth ? " /mo" : " /h"}`;
+        const suffix =
+            unit === Unit.IntegerPerMonth
+                ? " /mo"
+                : unit === Unit.IntegerPerHour
+                    ? " /h"
+                    : "";
+
+        return `${Math.round(Math.abs(value)).toString()}${suffix}`;
     }
 };
 

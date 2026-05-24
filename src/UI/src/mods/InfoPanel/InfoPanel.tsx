@@ -15,6 +15,7 @@ export interface InfoPanelProps {
     expanded?: boolean;
     onExpandedChange?: (expanded: boolean) => void;
     summary?: string;
+    summaryState?: "off" | "partial" | "on";
     renderChildren?: () => ReactNode;
 }
 
@@ -28,11 +29,20 @@ export const InfoPanel = ({
     expanded,
     onExpandedChange,
     summary,
+    summaryState = "off",
     renderChildren,
+
 }: InfoPanelProps) => {
     const [internalExpanded, setInternalExpanded] = useState(defaultExpanded);
     const isExpanded = expanded ?? internalExpanded;
     const showBody = !collapsible || isExpanded;
+
+    const summaryStateClass =
+        summaryState === "on"
+            ? styles.infoPanelSummaryOn
+            : summaryState === "partial"
+                ? styles.infoPanelSummaryPartial
+                : styles.infoPanelSummaryOff;
 
     const setExpanded = (value: boolean) => {
         if (expanded === undefined) {
@@ -54,7 +64,7 @@ export const InfoPanel = ({
                     onClick={toggleExpanded}
                 >
                     <span className={styles.infoPanelTitle}>{title}</span>
-                    <span className={styles.infoPanelSummary}>{summary}</span>
+                    <span className={`${styles.infoPanelSummary} ${summaryStateClass}`}>{summary}</span>
                     <span className={styles.infoPanelToggle}>{isExpanded ? "-" : "+"}</span>
                 </Button>
             )}
