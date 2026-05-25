@@ -47,8 +47,8 @@
     min-width: 34rem;
     margin-left: auto;
     margin-right: 5rem;
-    padding: 2rem 7rem;
-    border-radius: 9rem;
+    padding: 2rem 6.5rem;
+    border-radius: 8rem;
     border: 1rem solid rgba(255, 255, 255, 0.18);
     background-color: rgba(255, 255, 255, 0.10);
     color: rgba(254, 254, 254, 0.78);
@@ -93,7 +93,7 @@
 
 // Hover makes the +/- box read more like an interactive control.
 .infoPanelHeader:hover .infoPanelToggle {
-    border-color: rgba(255, 255, 255, 0.38);
-    background-color: rgba(255, 255, 255, 0.20);
+    border-color: rgba(255, 255, 255, 0.48);
+    background-color: rgba(255, 255, 255, 0.26);
 }
 

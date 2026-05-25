@@ -203,11 +203,11 @@
 }
 
 .sortButton {
-    width: 64rem;
+    width: auto;
     min-width: 64rem;
-    flex: 0 0 64rem;
-    padding-left: 5rem;
-    padding-right: 5rem;
+    flex: 0 0 auto;
+    padding-left: 8rem;
+    padding-right: 8rem;
 }
 
 .toggleButton {

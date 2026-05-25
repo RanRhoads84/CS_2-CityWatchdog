@@ -1,3 +1,7 @@
+// File: src/UI/src/mods/InfoCheckbox/InfoCheckbox.module.scss
+// Purpose: Styling for checkboxes.
+
+
 .subPanel {
     display: flex;
     flex-direction: row;
@@ -19,38 +23,27 @@
     background-color: var(--activeColorBright);
 }
 
+
 .iconLabelSection {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: auto;
+    min-width: 0;
+    flex: 1 1 auto;
 }
 
+
 .labelCheckboxSection {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: auto;
-    margin-left: 4rem;
-    font-size: var(--fontSizeXS);
+    flex: 0 0 auto;
 }
 
 .icon {
-    width: 24rem;
-    height: 24rem;
-    margin-right: 0.5em;
+    flex: 0 0 24rem;
 }
 
 .label {
-    color: rgba(254, 254, 254, 0.8);
-    font-size: var(--fontSizeS);
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
-
     .label:disabled {
         color: rgba(254, 254, 254, 0.6);
     }
