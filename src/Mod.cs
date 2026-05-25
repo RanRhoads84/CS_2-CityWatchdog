@@ -64,7 +64,7 @@ namespace CityWatchdog
             AddLocaleSource("it-IT", new LocaleIT(setting));
             AddLocaleSource("ja-JP", new LocaleJA(setting));
             AddLocaleSource("ko-KR", new LocaleKO(setting));
-            // AddLocaleSource("pl-PL", new LocalePL(setting));
+            AddLocaleSource("pl-PL", new LocalePL(setting));
             AddLocaleSource("pt-BR", new LocalePT_BR(setting));
             AddLocaleSource("zh-HANS", new LocaleZH_HANS(setting));
             AddLocaleSource("zh-HANT", new LocaleZH_HANT(setting));
