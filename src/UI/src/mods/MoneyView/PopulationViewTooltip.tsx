@@ -56,11 +56,6 @@ export const PopulationViewTooltipContent = ({ baseContent }: { readonly baseCon
                     value={deaths}
                     direction={-1}
                 />
-                <PopulationTooltipCount
-                    localization={localization}
-                    label={localize("PopulationTooltipHomeless", "Homeless:")}
-                    value={homeless}
-                />
                 <PopulationTooltipFlow
                     localization={localization}
                     label={localize("PopulationTooltipMovedIn", "Moved in:")}
@@ -72,6 +67,11 @@ export const PopulationViewTooltipContent = ({ baseContent }: { readonly baseCon
                     label={localize("PopulationTooltipMovedOut", "Moved out:")}
                     value={movedAway}
                     direction={-1}
+                />
+                <PopulationTooltipCount
+                    localization={localization}
+                    label={localize("PopulationTooltipHomeless", "Homeless:")}
+                    value={homeless}
                 />
             </div>
         </div>
