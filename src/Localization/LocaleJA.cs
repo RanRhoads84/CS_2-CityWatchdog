@@ -214,9 +214,9 @@ namespace CityWatchdog
                 { m_Settings.GetUILocaleID("ToggleAll"), "すべて切替" },
                 { m_Settings.GetUILocaleID("ExpandAll"), "すべて展開" },
                 { m_Settings.GetUILocaleID("CollapseAll"), "すべての行を折りたたむ" },
-                { m_Settings.GetUILocaleID("SortAscending"), "ASC ↑" },
-                { m_Settings.GetUILocaleID("SortDescending"), "DESC ↓" },
-                { m_Settings.GetUILocaleID("SortOrderTooltip"), "並び順" },
+
+                { m_Settings.GetUILocaleID("SortAscending"), "↑ 並べ替え 昇順" },
+                { m_Settings.GetUILocaleID("SortDescending"), "↓ 並べ替え 降順" },
                 { m_Settings.GetUILocaleID("ToggleAllTooltip"),
                     "すべてのアイコンを表示/非表示にします。\n" +
                     "色: 緑 = すべてON、青 = 混在、赤 = すべてOFF。" },

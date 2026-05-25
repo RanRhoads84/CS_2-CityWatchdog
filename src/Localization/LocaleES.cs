@@ -214,9 +214,9 @@ namespace CityWatchdog
                 { m_Settings.GetUILocaleID("ToggleAll"), "Alternar todo" },
                 { m_Settings.GetUILocaleID("ExpandAll"), "Expandir todo" },
                 { m_Settings.GetUILocaleID("CollapseAll"), "Contraer todas las filas" },
-                { m_Settings.GetUILocaleID("SortAscending"), "ASC ↑" },
-                { m_Settings.GetUILocaleID("SortDescending"), "DESC ↓" },
-                { m_Settings.GetUILocaleID("SortOrderTooltip"), "Orden" },
+
+                { m_Settings.GetUILocaleID("SortAscending"), "↑Ordenar Ascendente" },
+                { m_Settings.GetUILocaleID("SortDescending"), "↓Ordenar Descendente" },
                 { m_Settings.GetUILocaleID("ToggleAllTooltip"),
                     "Muestra/oculta todos los iconos.\n" +
                     "Color: verde = todo activado; azul = mixto; rojo = todo desactivado." },

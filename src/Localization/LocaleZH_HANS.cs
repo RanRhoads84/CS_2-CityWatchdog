@@ -214,9 +214,8 @@ namespace CityWatchdog
                 { m_Settings.GetUILocaleID("ToggleAll"), "全部切换" },
                 { m_Settings.GetUILocaleID("ExpandAll"), "全部展开" },
                 { m_Settings.GetUILocaleID("CollapseAll"), "折叠所有行" },
-                { m_Settings.GetUILocaleID("SortAscending"), "升序 ↑" },
-                { m_Settings.GetUILocaleID("SortDescending"), "降序 ↓" },
-                { m_Settings.GetUILocaleID("SortOrderTooltip"), "排序方式" },
+                { m_Settings.GetUILocaleID("SortAscending"), "↑ 排序 升序" },
+                { m_Settings.GetUILocaleID("SortDescending"), "↓ 排序 降序" },
                 { m_Settings.GetUILocaleID("ToggleAllTooltip"),
                     "显示/隐藏所有图标。\n" +
                     "颜色：绿色 = 全部开启；蓝色 = 混合；红色 = 全部关闭。" },

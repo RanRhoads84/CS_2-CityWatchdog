@@ -226,7 +226,6 @@ namespace CityWatchdog
 
                 { m_Settings.GetUILocaleID("SortAscending"), "↑Sort Ascending" },
                 { m_Settings.GetUILocaleID("SortDescending"), "↓Sort Descending" },
-                { m_Settings.GetUILocaleID("SortOrderTooltip"), "Sort order" },
                 { m_Settings.GetUILocaleID("ToggleAllTooltip"),
                     "Show/hide all icons.\n" +
                     "Color: green = all on; blue = mixed; red = all off." },
