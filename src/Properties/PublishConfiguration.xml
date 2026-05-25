@@ -83,9 +83,11 @@ https://unsplash.com/photos/a-dog-poses-in-front-of-a-distant-castle-bEpjaU_CTcM
 	<Dependency Id="74417" DisplayName="Unified Icon Library" />
 	<!--Change log for new version. Single line or multi line. Supports minimal markdown subset-->
 <ChangeLog>
-- added: homeless to population tooltip.
 - add color to the panel number boxes (5/5)
+- added: homeless to population.
+- fixed: Spanish and some long sentences covering checkboxes.
 - added: German DE update from UnMaestro.
+
 </ChangeLog>
 	<!--External link. supported types are discord, github, youtube, twitch, x, paypal, patreon, buymeacoffee, kofi, crowdin, gitlab-->
 	<ExternalLink Type="github" Url="https://github.com/River-Mochi/CityWatchdog" />

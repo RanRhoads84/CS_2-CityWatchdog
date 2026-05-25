@@ -139,7 +139,7 @@ const PopulationTooltipCount = ({
             label={label}
             value={displayValue}
             unit={Unit.Integer}
-            toneOverride="neutral"
+            toneOverride="softNeutral"
             showSign={false}
         />
     );
@@ -181,7 +181,7 @@ const PopulationTooltipRate = ({
     readonly value: number;
     readonly unit: Unit;
     readonly topRow?: boolean;
-    readonly toneOverride?: "positive" | "negative" | "neutral";
+        readonly toneOverride?: "positive" | "negative" | "neutral" | "softNeutral";
     readonly showSign?: boolean;
 }) => {
     const tone = toneOverride ?? getSignedAmountTone(value);
