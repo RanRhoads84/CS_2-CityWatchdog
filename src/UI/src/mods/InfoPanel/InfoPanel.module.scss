@@ -14,16 +14,16 @@
 }
 
 .infoPanelHeader {
-    width: 100%;
+    width: auto;
     min-height: 24rem;
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 8rem;
-    // Pull header background across the parent panel's 12rem left/right padding.
-    margin: -3rem -12rem;
-    padding: 6rem 16rem;
-
+    // Slightly widens the hover strip without reaching into the scroll bar area.
+    // This avoids the large right-side gap caused by full negative margins.
+    margin: -2rem -4rem;
+    padding: 5rem 8rem;
     border: 0;
     border-radius: 4rem;
     background-color: transparent;
@@ -60,7 +60,7 @@
 .infoPanelSummary {
     min-width: 34rem;
     margin-left: auto;
-    margin-right: 5rem;
+    margin-right: 4rem;
     padding: 1.5rem 6rem;
     border-radius: 7rem;
     border: 1rem solid rgba(255, 255, 255, 0.18);

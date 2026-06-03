@@ -138,6 +138,7 @@
     border-radius: 4rem;
     border: 1rem solid rgba(255, 255, 255, 0.35);
     background-color: rgba(36, 54, 66, 0.58);
+    box-sizing: border-box;
     transition: background-color 120ms ease-out, border-color 120ms ease-out, box-shadow 120ms ease-out;
 
     &:hover {
@@ -146,6 +147,7 @@
         box-shadow: inset 0 0 0 1rem rgba(255, 255, 255, 0.06);
     }
 }
+
 
 .infoIcon {
     width: 28rem;
@@ -194,9 +196,11 @@
 .sortButton {
     width: 32rem;
     min-width: 32rem;
+    max-width: 32rem;
     flex: 0 0 32rem;
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    box-sizing: border-box;
 }
 
 .sortIcon {
