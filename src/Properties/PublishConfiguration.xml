@@ -2,7 +2,7 @@
 	<!--Id must be set in order to update existing mod. Leave blank for first publish.-->
 	<ModId Value="144908" />
 	<!--Name of the mod to display to players-->
-	<DisplayName Value="City Watchdog [BETA]" />
+	<DisplayName Value="City Watchdog" />
 	<!--Short description of the mod-->
 	<ShortDescription Value="Show/Hide notification alert icons, add/remove Money, view Money, set Milestones." />
 	<!--Long description of the mod. Single line or multi line. Supports minimal markdown subset-->
@@ -75,7 +75,7 @@ https://unsplash.com/photos/a-dog-poses-in-front-of-a-distant-castle-bEpjaU_CTcM
 	<!--Link to the forum post where the mod can be discussed-->
 	<ForumLink Value="https://forum.paradoxplaza.com/forum/threads/city-watchdog.1924169/" />
 	<!--Version of the mod-->
-	<ModVersion Value="0.9.2" />
+	<ModVersion Value="0.9.3" />
 	<!--Recommended version of the base game to use the mod-->
 	<GameVersion Value="1.5.*" />
 	<!--Dependency for the mod, can be set multiple times-->
