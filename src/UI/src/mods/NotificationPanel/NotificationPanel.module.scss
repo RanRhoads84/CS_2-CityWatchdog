@@ -64,9 +64,10 @@
     border-radius: 0;
     overflow: visible;
     background-color: transparent; // hide the inner title bar on the header
-    // Coherent's font box sits slightly low here; move all header content up.
-    transform: translateY(-3rem);
+    // Coherent's font box sits slightly low here; move header content up.
+    transform: translateY(-5.5rem);
 }
+
 
 .headerTitleArea {
     display: flex;
@@ -78,8 +79,8 @@
 }
 
 .headerModIcon {
-    width: 24rem;
-    height: 24rem;
+    width: 28rem;
+    height: 22rem;
     margin-right: 10rem;
     object-fit: contain;
 }
@@ -99,14 +100,13 @@
     font-weight: 600;
     line-height: 1.15;
     letter-spacing: 1.8rem;
-    word-spacing: 4rem;
+    word-spacing: 5rem;
 }
 
-
 .headerCloseButton {
-    flex: 0 0 20rem;
-    width: 20rem;
-    height: 20rem;
+    flex: 0 0 17rem;
+    width: 17rem;
+    height: 17rem;
     margin-left: 8rem;
 }
 
