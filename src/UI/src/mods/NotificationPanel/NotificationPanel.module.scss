@@ -20,13 +20,14 @@
     // Actual vanilla Panel header wrapper.
     // Higher alpha = darker/less see-through. Lower alpha = lighter/more see-through.
     > div[class*="header_"] {
-        height: 24rem !important;
-        min-height: 24rem !important;
-        max-height: 24rem !important;
+        height: 30rem !important;
+        min-height: 30rem !important;
+        max-height: 30rem !important;
         background-color: rgba(36, 54, 66, 0.72) !important;
         background-image: none !important;
         transition: background-color 120ms ease-out;
     }
+
         // Header hover: lighter gray and a little more transparent.
         > div[class*="header_"]:hover {
             background-color: rgba(76, 98, 112, 0.46) !important;
@@ -55,11 +56,11 @@
 .header {
     width: 100%;
     min-width: 0;
-    height: 24rem;
+    height: 30rem;
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 0 4rem;
+    padding: 0 5rem;
     border-radius: 0;
     background-color: transparent; // hide the inner title bar on the header
 }
@@ -84,18 +85,21 @@
     display: flex;
     flex: 1 1 auto;
     min-width: 0;
+    height: 100%;
     flex-direction: row;
+    align-items: center;
     justify-content: center;
     color: #54d7ff;
     font-size: var(--fontSizeS);
     font-weight: 500;
-    letter-spacing: 2rem;
+    line-height: 1;
+    letter-spacing: 1.8rem;
 }
 
 .headerCloseButton {
-    flex: 0 0 20rem;
-    width: 20rem;
-    height: 20rem;
+    flex: 0 0 22rem;
+    width: 22rem;
+    height: 22rem;
     margin-left: 8rem;
 }
 
@@ -114,7 +118,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 8rem;
-    padding: 8rem 10rem;
+    padding: 5rem 10rem;
 }
 
 .toolbarLeft,
